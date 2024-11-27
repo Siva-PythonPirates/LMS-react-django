@@ -1,0 +1,35 @@
+.player {
+    @apply bg-white rounded-full p-2;
+  }
+  
+  .wall {
+    @apply bg-gray-500 rounded-full p-2;
+  }
+  
+  .start {
+    @apply bg-green-500 rounded-full p-2;
+  }
+  
+  .end {
+    @apply bg-red-500 rounded-full p-2;
+  }
+  
+  .key {
+    @apply bg-blue-500 rounded-full p-2 cursor-pointer;
+  }
+  
+  .score {
+    @apply font-bold text-2xl;
+  }
+  
+  .level {
+    @apply font-bold text-lg;
+  }
+  
+  .game-over-message {
+    @apply font-bold text-2xl;
+  }
+  
+  .game-message {
+    @apply font-bold text-lg;
+  }

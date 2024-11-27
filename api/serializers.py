@@ -1,8 +1,9 @@
-# serializers.py
 from rest_framework import serializers
 from .models import Course, Lesson, Quiz, Enrollment
 
 class CourseSerializer(serializers.ModelSerializer):
+    lessons = serializers.StringRelatedField(many=True)
+
     class Meta:
         model = Course
         fields = '__all__'

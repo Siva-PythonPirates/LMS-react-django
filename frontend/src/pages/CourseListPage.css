@@ -1,0 +1,4 @@
+.courses-grid{
+   display: flex;
+   flex-direction: row;
+}

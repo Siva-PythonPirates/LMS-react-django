@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryHackMe Hacktivities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .category {
+            margin-bottom: 40px;
+        }
+        .hacktivity {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .hacktivity img {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+        .hacktivity h3 {
+            margin: 0;
+        }
+        .hacktivity p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>TryHackMe Hacktivities</h1>
+    {% for category, hacktivities in categories.items() %}
+        <div class="category">
+            <h2>{{ category | capitalize }}</h2>
+            {% for hacktivity in hacktivities %}
+                <div class="hacktivity">
+                    <img src="{{ hacktivity['image'] }}" alt="Hacktivity Image">
+                    <div>
+                        <h3>{{ hacktivity['title'] }}</h3>
+                        <p>{{ hacktivity['description'] }}</p>
+                        <p><strong>Difficulty:</strong> {{ hacktivity['difficulty'] }}</p>
+                        <p><strong>Users:</strong> {{ hacktivity['users'] }}</p>
+                        <p><strong>Creator:</strong> {{ hacktivity['creator'] }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</body>
+</html>
