@@ -21,7 +21,7 @@ class Lesson(models.Model):
     Description = models.TextField()
     Course = models.ForeignKey(Course, related_name='lessons', on_delete=models.CASCADE)
     Status = models.CharField(max_length=20, choices=[('completed', 'Completed'), ('not completed', 'Not Completed')], default='not completed')
-
+    VideoUrl = models.URLField(max_length=500, blank=True, null=True) 
     def __str__(self) -> str:
         return self.LessonName
 

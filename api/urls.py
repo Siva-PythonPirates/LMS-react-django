@@ -1,4 +1,4 @@
-
+from .views import complete_lesson
 from django.urls import path
 from . import views
 
@@ -26,4 +26,5 @@ urlpatterns = [
     path('enrollments/<int:EnrollmentId>/', views.EnrollmentDetailAPIView.as_view()),
     path('enrollments/<int:EnrollmentId>/update/', views.EnrollmentUpdateAPIView.as_view()),
     path('enrollments/<int:EnrollmentId>/delete/', views.EnrollmentDeleteAPIView.as_view()),
+    path("lessons/<int:lesson_id>/complete/", complete_lesson, name="complete-lesson"),
 ]
